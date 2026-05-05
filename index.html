@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaar Win - Register & Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="nav-btn">
+                <i class="fas fa-download"></i> APP
+            </div>
+            <div class="nav-btn">
+                <i class="fas fa-headset"></i> SERVE
+            </div>
+        </header>
+
+        <section class="hero">
+            <img src="assets/hero.png" alt="Yaar Win Banner" class="hero-img">
+            <div class="logo-container">
+                <img src="assets/logo.png" alt="Yaar Win Logo" class="logo">
+                <h1 class="brand-name">Yaar Win</h1>
+            </div>
+        </section>
+
+        <div class="invite-card">
+            <div class="invite-label">Invite Code:</div>
+            <div class="invite-row">
+                <span class="invite-code" id="inviteCode">35756104798</span>
+                <button class="copy-btn" onclick="copyInvite()">
+                    <i class="far fa-copy"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="promo-banner">
+            🔥 Register now and get ₹37 to ₹167 free bonus! 🔥
+        </div>
+
+        <a href="https://11yaarwin.com/#/register?invitationCode=35756104798" class="main-cta">
+            REGISTER / LOGIN NOW
+        </a>
+
+        <div class="links-section">
+            <div class="link-item">
+                <div class="latency">102ms</div>
+                <div class="link-url">11yaarwin.com</div>
+                <a href="https://11yaarwin.com/#/register?invitationCode=35756104798" style="text-decoration: none;">
+                    <button class="reg-btn">Register/Login</button>
+                </a>
+            </div>
+            <div class="link-item">
+                <div class="latency">107ms</div>
+                <div class="link-url">yaarwin1.com</div>
+                <a href="https://11yaarwin.com/#/register?invitationCode=35756104798" style="text-decoration: none;">
+                    <button class="reg-btn">Register/Login</button>
+                </a>
+            </div>
+            <div class="link-item">
+                <div class="latency">112ms</div>
+                <div class="link-url">yaarwin-vip.com</div>
+                <a href="https://11yaarwin.com/#/register?invitationCode=35756104798" style="text-decoration: none;">
+                    <button class="reg-btn">Register/Login</button>
+                </a>
+            </div>
+            <div class="link-item">
+                <div class="latency">115ms</div>
+                <div class="link-url">yaarwin-app.com</div>
+                <a href="https://11yaarwin.com/#/register?invitationCode=35756104798" style="text-decoration: none;">
+                    <button class="reg-btn">Register/Login</button>
+                </a>
+            </div>
+        </div>
+
+        <a href="https://t.me/epcode" class="fab-telegram">
+            <i class="fab fa-telegram-plane" style="color: white; font-size: 30px;"></i>
+        </a>
+    </div>
+
+    <script>
+        function copyInvite() {
+            const code = document.getElementById('inviteCode').innerText;
+            navigator.clipboard.writeText(code).then(() => {
+                alert('Invite code copied: ' + code);
+            });
+        }
+
+        // Add random variation to latency for a "live" feel
+        document.querySelectorAll('.latency').forEach(el => {
+            const base = parseInt(el.innerText);
+            setInterval(() => {
+                const variation = Math.floor(Math.random() * 5) - 2;
+                el.innerText = (base + variation) + 'ms';
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
